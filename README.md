@@ -175,10 +175,21 @@ Nếu các bạn là sinh viên:
 Nếu các bạn là giảng viên hoặc reviewer:
 
 - dùng `src/` để đánh giá scaffold giao cho sinh viên và kết quả hoàn thiện cuối cùng
+## Kết quả Benchmark & Phân tích Chi tiết
+
+Toàn bộ kết quả benchmark thực nghiệm, bảng số liệu so sánh giữa Baseline Agent và Advanced Agent, cùng phần phân tích chuyên sâu về trade-off chi phí token và memory growth theo yêu cầu của Bước 8 đã được tổng hợp chi tiết tại:
+
+👉 **[STEP8.md](STEP8.md): Báo cáo phân tích chi tiết kết quả Benchmark & Memory System Trade-offs**
+
+### Tóm tắt kết quả chính:
+- **Standard Benchmark**: Advanced Agent đạt **100% Cross-session recall** (so với 2% của Baseline) nhờ persistent memory `User.md`.
+- **Long-Context Stress Benchmark**: Compact Memory giúp Advanced Agent giảm tới **37.6% lượng Prompt tokens processed** (13,554 tokens so với 21,725 tokens của Baseline), chứng minh ưu thế vượt trội khi hội thoại kéo dài.
 
 ## Tài liệu nên đọc tiếp
 
-- `Guide.md`: hướng dẫn từng bước để hoàn thành lab
-- `Rubric.md`: tiêu chí chấm điểm và bonus
+- `Guide.md`: Hướng dẫn từng bước để hoàn thành lab
+- `Rubric.md`: Tiêu chí chấm điểm và bonus
+- `STEP8.md`: Báo cáo phân tích kết quả benchmark và trade-off kỹ thuật
 
 Track này được thiết kế để các bạn không chỉ “dùng agent”, mà còn bắt đầu nghĩ như một người thiết kế **memory system** cho agent production.
+
